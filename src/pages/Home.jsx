@@ -28,7 +28,7 @@ const Home = () => {
             >
                 <div className="container py-5 text-center">
                     <h1 className="display-1 fw-bolder mb-3 text-warning">
-                        The Original Moti Mahal
+                         Moti Mahal Restaurant
                     </h1>
                     <h2 className="display-6 mb-4">
                         A Culinary Legacy Since 1947
