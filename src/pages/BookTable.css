@@ -1,0 +1,72 @@
+/* ================= PAGE BACKGROUND ================= */
+.book-table-page {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../assets/image.png") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= TITLE ================= */
+.card h2 {
+  color: #b31217;
+  letter-spacing: 1px;
+}
+
+/* ================= INPUTS ================= */
+.form-control {
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #e52d27;
+  box-shadow: 0 0 0 3px rgba(229, 45, 39, 0.25);
+}
+
+/* Placeholder */
+.form-control::placeholder {
+  color: #888;
+}
+
+/* ================= BUTTON ================= */
+.btn-dark {
+  background: linear-gradient(135deg, #b31217, #e52d27);
+  border: none;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 12px 30px rgba(229, 45, 39, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(229, 45, 39, 0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 35px 25px !important;
+  }
+
+  .card h2 {
+    font-size: 26px;
+  }
+}

@@ -1,93 +1,129 @@
 // src/pages/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Hum yahan se static data le rahe hain, lekin abhi hum sirf 3-4 featured items hardcode karenge
-// const featuredDishes = menuData.filter(item => item.isSignature); 
+import '../pages/Home.css'
+import backgroundImage from '../assets/image.png'
+import img1 from '../assets/restropic/img11.jpg'
+import img2 from '../assets/restropic/img2.jpg'
+import img3 from '../assets/restropic/img3.jpg'
+import img4 from '../assets/restropic/img4.jpg'
+import img5 from '../assets/restropic/img5.jpg'
+import img6 from '../assets/restropic/img6.jpg'
+import img7 from '../assets/restropic/img7.jpg'
+import Dish1 from '../assets/restropic/Dish1.jpg'
+import Dish2 from '../assets/restropic/Dish2.jpg'
+import Dish3 from '../assets/restropic/Dish3.jpg'
+
+
 
 const Home = () => {
-    // Hardcoded data for Featured Dishes (Agar aapne images add nahi ki hain toh sirf text use karein)
     const featuredDishes = [
-        { name: "Butter Chicken", description: "The world-famous creamy tomato curry.", image: "/assets/dish1.jpg" },
-        { name: "Dal Makhani", description: "Black lentils simmered overnight, rich and velvety.", image: "/assets/dish2.jpg" },
-        { name: "Tandoori Platter", description: "Assortment of succulent kebabs.", image: "/assets/dish3.jpg" },
+        { name: "Butter Chicken", description: "The world-famous creamy tomato curry.", image: Dish1 },
+        { name: "Dal Makhani", description: "Black lentils simmered overnight, rich and velvety.", image: Dish2 },
+        { name: "Kadhai Paneer", description: "Assortment of succulent kebabs.", image: Dish3 },
     ];
 
     return (
         <div className="home-page">
-            {/* 1. Hero Section (Full-width Banner) */}
-            <section 
+
+            {/* 1. Hero Section - FULL WIDTH + FULL HEIGHT */}
+            <section
                 className="text-white d-flex align-items-center"
                 style={{
-                    height: '95vh',
-                    backgroundImage: 'url(/assets/hero_ambiance.jpg)', // Replace with your high-res image
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)', // Dark overlay
-                    backgroundBlendMode: 'darken'
+                    height: "100vh",
+                    width: "99vw",
+                    backgroundSize: "small",
+                    backgroundPosition: "center",
+                    backgroundColor: "rgba(0,0,0,0.4)",
+                    backgroundBlendMode: "darken",
+                    margin: 0,
+                    padding: 0,
                 }}
             >
-                <div className="container py-5 text-center">
+                <div className="container-fluid py-5 text-center">
                     <h1 className="display-1 fw-bolder mb-3 text-warning">
-                         Moti Mahal Restaurant
+                        Moti Mahal Restaurant
                     </h1>
-                    <h2 className="display-6 mb-4">
-                        A Culinary Legacy Since 1947
-                    </h2>
-                    <p className="lead mb-5 fs-5">
-                        Experience the taste that started it all – the authentic Tandoori and Mughlai cuisine.
-                    </p>
+                    <h2 className="display-6 mb-4">A Journey of Flavor, Tradition & Passion</h2>
+<p className="lead mb-5 fs-5">
+  Discover the taste that redefined Indian cuisine and continues to inspire the world.
+</p>
+
+
                     <div className="d-grid gap-3 d-sm-flex justify-content-sm-center">
                         <Link to="/menu" className="btn btn-danger btn-lg px-5 me-sm-3 fw-bold shadow-lg">
                             View Menu
                         </Link>
-                        <Link to="/locations" className="btn btn-outline-light btn-lg px-5 shadow-lg">
+                        <Link to="/location" className="btn btn-outline-light btn-lg px-5 shadow-lg">
                             Find a Location
                         </Link>
                     </div>
                 </div>
             </section>
+             {/* 2.poster */}
+             <h3 className='text-center mb-2 mt-2 text-danger fw-bold display-4'>Explore Our Ambience</h3>
+            <div className='poster'>
+                <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src={img1} class="d-block w-100 carousel-img" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={img2} class="d-block w-100 carousel-img" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={img3} class="d-block w-100 carousel-img" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={img4} class="d-block w-100 carousel-img" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={img5} class="d-block w-100 carousel-img" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={img6} class="d-block w-100 carousel-img" alt="..."/>
+    </div>
+    <div class="carousel-item">
+      <img src={img7} class="d-block w-100 carousel-img" alt="..."/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-            {/* 2. Heritage/USP Section (Why Choose Us) */}
-            <section className="container my-5 py-5 text-center">
+            </div>
+
+          
+            {/* 3. Featured Dishes - FULL WIDTH */}
+            <section className="container-fluid my-5 py-5">
                 <h2 className="text-center mb-5 text-danger fw-bold display-4">
-                    Our Unmatched Heritage
-                </h2>
-                <div className="row g-4">
-                    <div className="col-md-4">
-                        {/* You need to install Bootstrap Icons: npm install bootstrap-icons */}
-                        <i className="bi bi-clock-history fs-1 text-danger mb-3"></i> 
-                        <h5 className="fw-bold mt-2">Pioneers Since 1947</h5>
-                        <p className="text-muted">Over 75 years of culinary mastery and tradition.</p>
-                    </div>
-                    <div className="col-md-4">
-                        <i className="bi bi-star-fill fs-1 text-danger mb-3"></i> 
-                        <h5 className="fw-bold mt-2">The Butter Chicken Origin</h5>
-                        <p className="text-muted">The creators of the dish loved by the entire world.</p>
-                    </div>
-                    <div className="col-md-4">
-                        <i className="bi bi-geo-alt fs-1 text-danger mb-3"></i> 
-                        <h5 className="fw-bold mt-2">Global Presence</h5>
-                        <p className="text-muted">Serving authentic cuisine across multiple cities and countries.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <hr className="my-5" />
-
-            {/* 3. Featured Dishes Section (Menu Preview) */}
-            <section className="container my-5 py-5">
-                <h2 className="text-center mb-5 text-dark fw-bold display-4">
                     Signature Dishes
                 </h2>
-                <div className="row g-4">
+
+                <div className="row g-4 justify-content-center">
                     {featuredDishes.map((dish, index) => (
                         <div className="col-md-4" key={index}>
                             <div className="card h-100 border-0 shadow-lg">
-                                <img 
-                                    src={dish.image} 
-                                    className="card-img-top" 
-                                    alt={dish.name} 
-                                    style={{ height: '250px', objectFit: 'cover' }}
+                                <img
+                                    src={dish.image}
+                                    className="card-img-top"
+                                    alt={dish.name}
+                                    style={{ height: "250px", objectFit: "cover" }}
                                 />
                                 <div className="card-body text-center">
                                     <h5 className="card-title fw-bold text-danger">{dish.name}</h5>
@@ -102,16 +138,16 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* 4. Call to Action - Reservation */}
-            <section className="bg-danger text-white py-5 my-5">
-                <div className="container text-center">
+            {/* 4. CTA Section - FULL WIDTH */}
+            <section className="bg-danger text-white py-5 my-5 w-100">
+                <div className="container-fluid text-center">
                     <h3 className="fw-bold mb-3">Plan Your Visit</h3>
                     <p className="lead mb-4">
                         Book your table today and enjoy an authentic dining experience.
                     </p>
-                    <button className="btn btn-light btn-lg fw-bold px-5">
+                    <Link to="/booktable" className="btn btn-light btn-lg fw-bold px-5">
                         Book a Table Now
-                    </button>
+                    </Link>
                 </div>
             </section>
 

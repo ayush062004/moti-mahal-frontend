@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="bg-dark text-white pt-5 pb-3 mt-5">
-            <div className="container">
+            <div className="container-fluid px-5 text-center">
                 <div className="row">
                     {/* Brand Info */}
                     <div className="col-md-4 mb-4">
@@ -22,16 +22,14 @@ const Footer = () => {
                         <ul className="list-unstyled">
                             <li><Link to="/menu" className="text-white text-decoration-none small">Menu</Link></li>
                             <li><Link to="/about" className="text-white text-decoration-none small">Our Story</Link></li>
-                            <li><Link to="/locations" className="text-white text-decoration-none small">Locations</Link></li>
+                            <li><Link to="/location" className="text-white text-decoration-none small">Locations</Link></li>
                         </ul>
                     </div>
                     
                     {/* Contact Info */}
                     <div className="col-md-3 mb-4">
                         <h6 className="text-uppercase fw-bold mb-3">Contact</h6>
-                        <p className="small mb-1">
-                            <i className="bi bi-geo-alt-fill me-2"></i> Find a Branch Near You
-                        </p>
+                        
                         <p className="small mb-1">
                             <i className="bi bi-envelope-fill me-2"></i> info@motimahal.com
                         </p>
@@ -41,14 +39,50 @@ const Footer = () => {
                     </div>
 
                     {/* Social Media */}
-                    <div className="col-md-3 mb-4">
-                        <h6 className="text-uppercase fw-bold mb-3">Follow Us</h6>
-                        <div className="d-flex">
-                            <a href="#" className="text-white me-3"><i className="bi bi-facebook fs-5"></i></a>
-                            <a href="#" className="text-white me-3"><i className="bi bi-instagram fs-5"></i></a>
-                            <a href="#" className="text-white"><i className="bi bi-twitter fs-5"></i></a>
-                        </div>
-                    </div>
+<div className="col-md-3 mb-4">
+  <h6 className="text-uppercase fw-bold mb-3">Follow Us</h6>
+
+  <div className="d-flex gap-4 ms-5 text-center align-items-start">
+    
+    <div>
+      <a href="https://www.facebook.com/people/Moti-mahal-in-aonang-krabi-Thailand/100063633083009/#" className="text-decoration-none">
+        <img
+          src="https://cdn.simpleicons.org/facebook/ffffff"
+          alt="Facebook"
+          width="26"
+          height="26"
+        />
+      </a>
+      <div className="small text-muted mt-1">Facebook</div>
+    </div>
+
+    <div>
+      <a href="#" className="text-decoration-none">
+        <img
+          src="https://cdn.simpleicons.org/instagram/ffffff"
+          alt="Instagram"
+          width="26"
+          height="26"
+        />
+      </a>
+      <div className="small text-muted mt-1">Instagram</div>
+    </div>
+
+    <div>
+      <a href="https://share.google/z7bB2wiltr9mZIvB8" className="text-decoration-none">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/300/300221.png"
+          alt="Google"
+          width="26"
+          height="26"
+        />
+      </a>
+      <div className="small text-muted mt-1">Twitter</div>
+    </div>
+
+  </div>
+</div>
+
                 </div>
 
                 <hr className="my-3 text-muted" />

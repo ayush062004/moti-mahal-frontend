@@ -7,13 +7,12 @@ const Header = () => {
         { name: "Home", path: "/" },
         { name: "Menu", path: "/menu" },
         { name: "About Us", path: "/about" },
-        { name: "Locations", path: "/locations" },
         { name: "Contact", path: "/contact" },
     ];
 
     return (
         // Bootstrap Navbar classes use kiye
-        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm w-100">
             <div className="container">
                 {/* Logo Section */}
                 <Link className="navbar-brand text-danger fw-bold fs-4" to="/">
@@ -50,9 +49,11 @@ const Header = () => {
                     </ul>
 
                     {/* Reservation Button */}
-                    <button className="btn btn-danger rounded-pill px-4">
-                        Book A Table
-                    </button>
+                    <Link to="/booktable">
+  <button className="btn btn-danger rounded-pill px-4">
+    Book A Table
+  </button>
+</Link>
                 </div>
             </div>
         </nav>
