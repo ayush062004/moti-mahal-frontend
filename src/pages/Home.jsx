@@ -10,7 +10,7 @@ import img4 from '../assets/restropic/img4.jpg'
 import img5 from '../assets/restropic/img5.jpg'
 import img6 from '../assets/restropic/img6.jpg'
 import img7 from '../assets/restropic/img7.jpg'
-import Dish1 from '../assets/restropic/Dish1.jpg'
+import Dish4 from '../assets/restropic/Dish4.jpg'
 import Dish2 from '../assets/restropic/Dish2.jpg'
 import Dish3 from '../assets/restropic/Dish3.jpg'
 
@@ -18,9 +18,9 @@ import Dish3 from '../assets/restropic/Dish3.jpg'
 
 const Home = () => {
     const featuredDishes = [
-        { name: "Butter Chicken", description: "The world-famous creamy tomato curry.", image: Dish1 },
+        { name: "Butter Chicken", description: "The world-famous creamy tomato curry.", image: Dish3 },
         { name: "Dal Makhani", description: "Black lentils simmered overnight, rich and velvety.", image: Dish2 },
-        { name: "Kadhai Paneer", description: "Assortment of succulent kebabs.", image: Dish3 },
+        { name: "Kadhai Paneer", description: "Its signature bold and smoky flavor comes from Kadai Masala", image: Dish4 },
     ];
 
     return (
