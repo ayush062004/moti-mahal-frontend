@@ -1,6 +1,6 @@
 import React from "react";
 import MenuBook from "../components/MenuBook";
-import "../components/menubook.css";
+import "../components/MenuBook.css";
 
 const Menu = () => {
   return (
