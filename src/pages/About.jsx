@@ -6,7 +6,8 @@ const About = () => {
     <div className="about-page">
 
       {/* HERO SECTION */}
-      <section className="about-hero d-flex align-items-center justify-content-center text-center">
+      <section className="about-hero about-hero-fix d-flex align-items-center justify-content-center text-center">
+
         <div>
           <h1 className="display-3 fw-bold text-white">
             About Moti Mahal – Ao Nang

@@ -181,3 +181,16 @@ h2 {
 html {
   scroll-behavior: smooth;
 }
+
+.hero-section {
+  min-height: calc(100vh - 72px); /* navbar height */
+  padding-top: 72px;
+  width: 100%;
+  margin: 0;
+}
+
+@supports (height: 100svh) {
+  .hero-section {
+    min-height: calc(100svh - 72px);
+  }
+}

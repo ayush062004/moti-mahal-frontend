@@ -28,7 +28,7 @@ const BookTable = () => {
   };
 
   return (
-    <div className="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-light">
+    <div className="container-fluid booktable-page d-flex align-items-center justify-content-center bg-light">
       <div className="row w-100 justify-content-center">
         <div className="col-lg-6 col-md-8 col-sm-11">
           <div className="card shadow-lg border-0 rounded-4">

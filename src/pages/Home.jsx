@@ -27,19 +27,8 @@ const Home = () => {
         <div className="home-page">
 
             {/* 1. Hero Section - FULL WIDTH + FULL HEIGHT */}
-            <section
-                className="text-white d-flex align-items-center"
-                style={{
-                    height: "100vh",
-                    width: "99vw",
-                    backgroundSize: "small",
-                    backgroundPosition: "center",
-                    backgroundColor: "rgba(0,0,0,0.4)",
-                    backgroundBlendMode: "darken",
-                    margin: 0,
-                    padding: 0,
-                }}
-            >
+           <section className="hero-section text-white d-flex align-items-center">
+
                 <div className="container-fluid py-5 text-center">
                     <h1 className="display-1 fw-bolder mb-3 text-warning">
                         Moti Mahal Restaurant

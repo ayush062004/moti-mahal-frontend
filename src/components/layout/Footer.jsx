@@ -31,10 +31,10 @@ const Footer = () => {
                         <h6 className="text-uppercase fw-bold mb-3">Contact</h6>
                         
                         <p className="small mb-1">
-                            <i className="bi bi-envelope-fill me-2"></i> info@motimahal.com
+                            <i className="bi bi-envelope-fill me-2"></i> motimahalkrabi@gmail.com
                         </p>
                         <p className="small">
-                            <i className="bi bi-phone-fill me-2"></i> +91-XXX-XXXXXX
+                            <i className="bi bi-phone-fill me-2"></i> +66-06-3208-9400
                         </p>
                     </div>
 

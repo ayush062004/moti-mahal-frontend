@@ -62,3 +62,10 @@
     font-size: 2.2rem;
   }
 }
+
+/* ===== ABOUT HERO FIX ===== */
+.about-hero-fix {
+  min-height: calc(100vh - 72px); /* navbar height */
+  padding-top: 72px;
+  width: 100%;
+}

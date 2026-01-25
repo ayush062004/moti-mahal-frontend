@@ -70,3 +70,16 @@
     font-size: 26px;
   }
 }
+
+/* ===== BOOK TABLE PAGE FIX ===== */
+.booktable-page {
+  min-height: calc(100vh - 72px); /* navbar height */
+  padding-top: 72px;
+  width: 100%;
+}
+
+@supports (height: 100svh) {
+  .booktable-page {
+    min-height: calc(100svh - 72px);
+  }
+}
