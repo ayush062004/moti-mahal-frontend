@@ -1,28 +1,29 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./BookTable.css";
 
 const BookTable = () => {
   const form = useRef();
+  const [showPopup, setShowPopup] = useState(false);
+  const [errorPopup, setErrorPopup] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "service_9tgw82q",
-        "template_41rfntp",
+        "service_30w81jv",
+        "template_4kqs5r9",
         form.current,
-        "1pIbfonnl_GJgtPYB"
+        "rvW3DpWj25Ayu1oK9"
       )
       .then(
         () => {
-          alert("✅ Table booked successfully. Email sent!");
           form.current.reset();
+          setShowPopup(true);   // ✅ success popup
         },
-        (error) => {
-          alert("❌ Booking failed. Try again.");
-          console.log(error.text);
+        () => {
+          setErrorPopup(true);  // ❌ error popup
         }
       );
   };
@@ -84,6 +85,29 @@ const BookTable = () => {
           </div>
         </div>
       </div>
+
+      {/* ✅ SUCCESS POPUP */}
+      {showPopup && (
+        <div className="popup-overlay">
+          <div className="popup-box">
+            <h3>✅ Table Booked Successfully!</h3>
+            <p>Your reservation request has been sent.</p>
+            <button onClick={() => setShowPopup(false)}>Close</button>
+          </div>
+        </div>
+      )}
+
+      {/* ❌ ERROR POPUP */}
+      {errorPopup && (
+        <div className="popup-overlay">
+          <div className="popup-box">
+            <h3>❌ Booking Failed</h3>
+            <p>Please try again later.</p>
+            <button onClick={() => setErrorPopup(false)}>Close</button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
