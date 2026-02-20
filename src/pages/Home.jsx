@@ -117,9 +117,7 @@ const Home = () => {
                                 <div className="card-body text-center">
                                     <h5 className="card-title fw-bold text-danger">{dish.name}</h5>
                                     <p className="card-text text-muted">{dish.description}</p>
-                                    <Link to="/menu" className="btn btn-outline-danger mt-2">
-                                        View Details
-                                    </Link>
+                                    
                                 </div>
                             </div>
                         </div>

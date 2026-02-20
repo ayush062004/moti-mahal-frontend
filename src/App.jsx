@@ -7,23 +7,25 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import BookTable from "./pages/Booktable.jsx";
 import Location from "./pages/Location.jsx";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";   // ✅ ADD THIS
 
 function App() {
   return (
     <Router>
       <Header />
 
-      {/* 🔥 NO w-100, NO container, just plain wrapper */}
       <div style={{ width: "100%", overflowX: "hidden" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/booktable" element={<BookTable/>} />
-          <Route path="/location" element={<Location/>} />
+          <Route path="/booktable" element={<BookTable />} />
+          <Route path="/location" element={<Location />} />
         </Routes>
       </div>
+
+      <WhatsAppButton />   {/* ✅ ADD THIS */}
 
       <Footer />
     </Router>
