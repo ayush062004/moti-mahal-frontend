@@ -12,7 +12,7 @@ import img6 from '../assets/restropic/img6.jpg'
 import img7 from '../assets/restropic/img7.jpg'
 import Dish4 from '../assets/restropic/Dish4.jpg'
 import Dish2 from '../assets/restropic/Dish2.jpg'
-import Dish3 from '../assets/restropic/Dish3.jpg'
+import Dish3 from '../assets/restropic/butterchicken.jpg'
 
 
 
