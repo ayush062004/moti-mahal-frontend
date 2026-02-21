@@ -45,7 +45,7 @@ const Contact = () => {
           <div className="info-block">
             <h4>Restaurant address</h4>
             <p>📍Ao Nang, Mueang Krabi District, Krabi 81000, Thailand</p>
-            <p>📧 motimahal@gmail.com</p>
+            <p>📧 motimahalkrabi@gmail.com</p>
             <p>📞 +66 2327-3073</p>
           </div>
 
