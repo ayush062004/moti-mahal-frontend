@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
-import HTMLFlipBook from "react-pageflip";
+import React from "react";
 import "./MenuBook.css";
 
-/* 🔥 Import All 24 Images */
+/* Import All 24 Images */
 import page1 from "../assets/menu/Pic1.jpg";
 import page2 from "../assets/menu/Pic2.jpg";
 import page3 from "../assets/menu/Pic3.jpg";
@@ -36,53 +35,61 @@ const pages = [
 ];
 
 function MenuBook() {
-  const [size, setSize] = useState({ width: 600, height: 800 });
-
-  useEffect(() => {
-    const updateSize = () => {
-      const w = window.innerWidth;
-
-      if (w < 768) {
-        const mobileWidth = w - 30;
-
-        setSize({
-          width: mobileWidth,
-          height: mobileWidth * 1.4
-        });
-      } else {
-        const bookWidth = Math.min(w * 0.35, 500);
-
-        setSize({
-          width: bookWidth,
-          height: bookWidth * 1.4
-        });
-      }
-    };
-
-    updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
-
   return (
-    <div className="menu-wrapper">
-      <HTMLFlipBook
-        width={size.width}
-        height={size.height}
-        size="fixed"
-        showCover={true}
-        usePortrait={true}
-        mobileScrollSupport={true}
-        drawShadow={true}
-        flippingTime={800}
-        className="flipbook"
+    <div className="container my-5">
+      <div
+        id="menuCarousel"
+        className="carousel slide"
+        data-bs-ride="carousel"
       >
-        {pages.map((img, i) => (
-          <div className="page" key={i}>
-            <img src={img} alt={`Menu ${i + 1}`} />
-          </div>
-        ))}
-      </HTMLFlipBook>
+        {/* Indicators */}
+        <div className="carousel-indicators">
+          {pages.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              data-bs-target="#menuCarousel"
+              data-bs-slide-to={index}
+              className={index === 0 ? "active" : ""}
+            ></button>
+          ))}
+        </div>
+
+        {/* Slides */}
+        <div className="carousel-inner">
+          {pages.map((img, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
+            >
+              <img
+                src={img}
+                className="d-block w-100 menu-img"
+                alt={`Menu ${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Controls */}
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#menuCarousel"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#menuCarousel"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon"></span>
+        </button>
+      </div>
     </div>
   );
 }

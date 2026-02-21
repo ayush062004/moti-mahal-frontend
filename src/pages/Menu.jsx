@@ -4,7 +4,7 @@ import "../components/MenuBook.css";
 
 const Menu = () => {
   return (
-    <div className="menu-page-wrapper">
+   <div className="container my-5 text-center" style={{ paddingTop: "10px" }}>
       <h1 className="menu-title">Our Menu</h1>
       <MenuBook />
     </div>
