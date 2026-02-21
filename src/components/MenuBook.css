@@ -1,156 +1,76 @@
-/* ================= GLOBAL FIX ================= */
-html,
-body,
-#root {
+/* ===== FULL PAGE FIX ===== */
+
+.menu-page {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  background: #000; /* pure black */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px; /* navbar space */
+  box-sizing: border-box;
 }
 
-/* ================= PAGE WRAPPER ================= */
+/* Heading Section */
+.menu-title {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 36px;
+  font-weight: bold;
+  background: #000;
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+
+/* Book Center */
+.menu-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+/* Flipbook Shadow */
+.flipbook {
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.9);
+}
+
+/* Page Style */
+.page {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Fit Properly */
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .menu-title {
+    font-size: 26px;
+    padding: 25px 0;
+  }
+}
+
 .menu-page-wrapper {
-  width: 100vw;
-  min-height: calc(100vh - 70px);
-  padding-top: 20px;
+  min-height: 100vh;
+  padding: 60px 0;   /* top-bottom spacing */
+  background-color: #000; /* optional */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ================= TITLE ================= */
 .menu-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-/* ================= SLIDER BACKGROUND ================= */
-.menu-slider-wrapper {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Decorative lights */
-.menu-slider-wrapper::before,
-.menu-slider-wrapper::after {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  filter: blur(130px);
-  opacity: 0.55;
-  z-index: 0;
-}
-
-.menu-slider-wrapper::before {
-  background: #ff6f61;
-  top: -120px;
-  left: -120px;
-}
-
-.menu-slider-wrapper::after {
-  background: #6a11cb;
-  bottom: -140px;
-  right: -140px;
-}
-
-/* ================= GLASS IMAGE CARD ================= */
-.menu-image-box {
-  width: 95%;
-  height: 90%;
-  position: relative;
-  z-index: 1;
-
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.25);
-
-  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ================= IMAGE ================= */
-.menu-image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 12px;
-}
-
-/* ================= CONTROLS ================= */
-.menu-controls,
-.menu-controls-mobile {
-  position: absolute;
-  bottom: 20px;
-  z-index: 2;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-
-/* ================= BUTTONS ================= */
-.nav-btn {
-  background: linear-gradient(135deg, #ff512f, #dd2476);
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.nav-btn:hover {
-  transform: scale(1.05);
-}
-
-.nav-btn:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-
-/* ================= PAGE COUNT ================= */
-.page-indicator {
-  font-weight: 600;
-  color: #fff;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .menu-image-box {
-    width: 95%;
-    height: 85%;
-  }
-
-  .nav-btn {
-    font-size: 14px;
-    padding: 8px 14px;
-  }
-
-  .menu-controls-mobile {
-    width: 90%;
-    justify-content: space-between;
-  }
+  font-size: 36px;
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 40px;
 }

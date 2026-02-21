@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import HTMLFlipBook from "react-pageflip";
+import "./MenuBook.css";
 
+/* 🔥 Import All 24 Images */
 import page1 from "../assets/menu/Pic1.jpg";
 import page2 from "../assets/menu/Pic2.jpg";
 import page3 from "../assets/menu/Pic3.jpg";
@@ -32,31 +35,56 @@ const pages = [
   page19, page20, page21, page22, page23, page24
 ];
 
-const MenuBook = () => {
-  const [index, setIndex] = useState(0);
+function MenuBook() {
+  const [size, setSize] = useState({ width: 600, height: 800 });
 
-  const next = () => {
-    if (index < pages.length - 1) setIndex(index + 1);
-  };
+  useEffect(() => {
+    const updateSize = () => {
+      const w = window.innerWidth;
 
-  const prev = () => {
-    if (index > 0) setIndex(index - 1);
-  };
+      if (w < 768) {
+        const mobileWidth = w - 30;
+
+        setSize({
+          width: mobileWidth,
+          height: mobileWidth * 1.4
+        });
+      } else {
+        const bookWidth = Math.min(w * 0.35, 500);
+
+        setSize({
+          width: bookWidth,
+          height: bookWidth * 1.4
+        });
+      }
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   return (
-    <div className="menu-slider-wrapper">
-      <div className="menu-image-box">
-        <img src={pages[index]} alt={`Menu ${index + 1}`} />
-      </div>
-
-      {/* CONTROLS */}
-      <div className="menu-controls">
-        <button onClick={prev} disabled={index === 0}>◀</button>
-        <span>{index + 1} / {pages.length}</span>
-        <button onClick={next} disabled={index === pages.length - 1}>▶</button>
-      </div>
+    <div className="menu-wrapper">
+      <HTMLFlipBook
+        width={size.width}
+        height={size.height}
+        size="fixed"
+        showCover={true}
+        usePortrait={true}
+        mobileScrollSupport={true}
+        drawShadow={true}
+        flippingTime={800}
+        className="flipbook"
+      >
+        {pages.map((img, i) => (
+          <div className="page" key={i}>
+            <img src={img} alt={`Menu ${i + 1}`} />
+          </div>
+        ))}
+      </HTMLFlipBook>
     </div>
   );
-};
+}
 
 export default MenuBook;
