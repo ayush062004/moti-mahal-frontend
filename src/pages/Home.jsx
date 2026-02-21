@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../pages/Home.css'
 import backgroundImage from '../assets/image.png'
-import img1 from '../assets/restropic/img11.jpg'
+import img1 from '../assets/restropic/newpic.jpg'
 import img2 from '../assets/restropic/img2.jpg'
 import img3 from '../assets/restropic/img3.jpg'
 import img4 from '../assets/restropic/img4.jpg'
@@ -85,7 +85,7 @@ const Home = () => {
 
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img src={img1} className="d-block w-100 carousel-img"
+                            <img src={img1} className="d-block w-100 carousel-img imageset"
                                 alt="Moti Mahal Restaurant Interior in Krabi Thailand" />
                         </div>
                         <div className="carousel-item">

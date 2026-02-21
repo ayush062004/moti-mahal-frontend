@@ -152,3 +152,9 @@ html, body, #root {
   width: 100%;
   z-index: 1000;
 }
+
+.imageset {
+  height: 200px;          /* apne hisaab se height set karo */
+  object-fit:cover;      /* image crop karega */
+  object-position:top;   /* upper part show karega */
+}
